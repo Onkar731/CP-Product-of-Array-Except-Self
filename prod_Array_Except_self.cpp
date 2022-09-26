@@ -22,7 +22,7 @@
 #include<iostream>
 using namespace std;
 
-long productArrayExceptSelf(int[], int, int);
+long productArrayExceptSelf(int[], int);
 
 int main()
 {
