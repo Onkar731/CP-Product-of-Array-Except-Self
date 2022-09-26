@@ -49,8 +49,8 @@ int main()
 
     if(j != n) {
         for(int i = 0; i < n; i++)
-            if(i == j)
-                answer[i] = productArrayExceptSelf(array, n, i);
+            if(array[i] == 0)
+                answer[i] = productArrayExceptSelf(array, n);
             else
                 answer[i] = 0;
     }
@@ -71,14 +71,12 @@ int main()
     return 0;
 }
 
-long productArrayExceptSelf(int array[], int n, int index)
+long productArrayExceptSelf(int array[], int n)
 {
     long prd = 1;
     for(int i = 0; i < n; i++)
-        if(i != index){
+        if(array[i] != 0){
             prd *= array[i];
-            if(prd == 0)
-                return 0;
         }
 
     return prd;
